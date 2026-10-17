@@ -1,16 +1,14 @@
-const u = (id: string) => `https://images.pexels.com/photos/${id}?auto=compress&cs=tinysrgb&w=1600`;
-
 export const heroImages = {
-  home: u("56866"), // Elegant pink roses
-  homeFallback: u("931177"), // Soft white/cream bouquet
-  generalFallback: u("56866"),
-  boutique: u("1093950"), // Elegant floral box
-  cartes: u("3512718"), // Artisanal/creative vibe
-  mariages: u("931177"), // Romantic white/cream
-  collaborations: u("3760263"), // Professional/artisanal
-  ateliers: u("3760263"), // Workshop/creator vibe
-  occasions: u("931177"), // Celebration/gifting
-  histoire: u("3512718"), // Vintage/elegant aesthetic
-  contact: u("2071882"), // Soft, welcoming floral
-  commande: u("1093950"), // Clean, elegant box
+  home: "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  homeFallback: "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  generalFallback: "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  boutique: "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  cartes: "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  mariages: "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  collaborations: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  ateliers: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  occasions: "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  histoire: "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  contact: "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  commande: "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=1600",
 };

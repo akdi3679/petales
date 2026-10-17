@@ -24,62 +24,68 @@ const makeVariants = (price: number): ProductVariant[] => [
   { id: "grand", name: "Grand bouquet", priceCents: Math.round(price * 100 * 1.4) },
 ];
 
-const pexels = (id: string) => `https://images.pexels.com/photos/${id}?auto=compress&cs=tinysrgb&w=800`;
-
 const base = [
   { 
     id: "1", slug: "baiser-de-pivoine", name: "Baiser de Pivoine", bestSeller: true, price: 85, 
     tags: ["amour", "pink", "roses", "bouquets"], 
-    image: pexels("56866"), hoverImage: pexels("56866"), 
+    image: "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Pivoines sculptées aux teintes poudrées.", 
     description: "Un bouquet romantique aux teintes douces, sculpté à la main pour capturer l'essence d'un amour éternel." 
   },
   { 
     id: "2", slug: "douceur-daurore", name: "Douceur d'Aurore", bestSeller: true, price: 65, 
     tags: ["naissance", "white", "roses", "boxes"], 
-    image: pexels("931177"), hoverImage: pexels("931177"), 
+    image: "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Nuances pastel pour un nouveau départ.", 
     description: "Des nuances pastel délicates pour célébrer une naissance ou un nouveau départ en douceur." 
   },
   { 
     id: "3", slug: "eclat-de-rose", name: "Éclat de Rose", bestSeller: true, price: 120, 
     tags: ["amour", "red", "roses", "bouquets", "celebration"], 
-    image: pexels("1122531"), hoverImage: pexels("1122531"), 
+    image: "https://images.pexels.com/photos/1122531/pexels-photo-1122531.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/1122531/pexels-photo-1122531.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "L'intensité du rouge, sans compromis.", 
     description: "L'intensité du rouge dans une composition audacieuse et passionnée." 
   },
   { 
     id: "4", slug: "jardin-secret", name: "Jardin Secret", bestSeller: true, price: 95, 
     tags: ["remerciement", "pink", "chrysanthemums", "vases"], 
-    image: pexels("1093950"), hoverImage: pexels("1093950"), 
+    image: "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Un écrin de verdure pour dire merci.", 
     description: "Un écrin de verdure et de fleurs délicates pour dire merci avec élégance." 
   },
   { 
     id: "5", slug: "coffret-azur", name: "Coffret Azur", bestSeller: true, price: 150, 
     tags: ["celebration", "green", "sim_carnations", "gift_sets", "boxes"], 
-    image: pexels("3512718"), hoverImage: pexels("3512718"), 
+    image: "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Notre coffret signature.", 
     description: "Notre coffret signature, parfait pour les cadeaux d'affaires ou les grandes célébrations." 
   },
   { 
     id: "6", slug: "murmure-blanc", name: "Murmure Blanc", bestSeller: true, price: 75, 
     tags: ["sympathy", "white", "roses", "bags"], 
-    image: pexels("2071882"), hoverImage: pexels("2071882"), 
+    image: "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "La pureté du blanc, apaisante.", 
     description: "La pureté du blanc dans une composition apaisante et pleine de douceur." 
   },
   { 
     id: "7", slug: "passion-rouge", name: "Passion Rouge", bestSeller: true, price: 110, 
     tags: ["amour", "red", "roses", "bouquets"], 
-    image: pexels("1122531"), hoverImage: pexels("1122531"), 
+    image: "https://images.pexels.com/photos/1122531/pexels-photo-1122531.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/1122531/pexels-photo-1122531.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Une déclaration flamboyante.", 
     description: "Une déclaration flamboyante pour les amours passionnées." 
   },
   { 
     id: "8", slug: "fraicheur-printaniere", name: "Fraîcheur Printanière", bestSeller: true, price: 80, 
     tags: ["get_well", "pink", "chrysanthemums", "vases"], 
-    image: pexels("3760263"), hoverImage: pexels("3760263"), 
+    image: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Lumineuse, pour souhaiter un prompt rétablissement.", 
     description: "Un bouquet lumineux pour souhaiter un prompt rétablissement ou célébrer le printemps." 
   },
