@@ -5,7 +5,7 @@ export function Hero() {
     <section className="relative w-full h-[100dvh] min-h-[600px] overflow-hidden bg-ink m-0 p-0">
       {/* !h-full !w-full !max-w-none overrides the global img { height: auto } rule */}
       <img
-        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2000&q=80"
+        src="https://images.unsplash.com/photo-1712135596996-3dda241aa9bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
         alt="Bouquet de fleurs en guimauve — Maison de Pétales"
         loading="eager"
         decoding="async"

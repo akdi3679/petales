@@ -18,7 +18,7 @@ export default function AteliersPage() {
   return (
     <main className="bg-ivory pb-32 md:pb-24">
       <section className="relative h-dvh w-full overflow-hidden">
-        <Image src="https://images.unsplash.com/photo-pGr7g4l8EOI?auto=format&fit=crop&w=1600&q=80" alt="Atelier floral en guimauve" fill className="object-cover" priority sizes="100vw" />
+        <Image src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Atelier floral en guimauve" fill className="object-cover" priority sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 z-10 w-full px-6 pb-16 md:px-12 lg:px-20">
           <div className="max-w-xl">
