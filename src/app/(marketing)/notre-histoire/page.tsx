@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  "https://images.pexels.com/photos/56866/pexels-photo-56866.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1518895949257-95d8adfd52c7?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80",
 ];
 
 const favoriteProducts = products.slice(0, 3);
@@ -23,7 +23,7 @@ export default function NotreHistoirePage() {
   return (
     <main className="bg-ivory pb-32 md:pb-24">
       <section className="relative h-dvh w-full overflow-hidden">
-        <Image src="https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Notre Histoire" fill className="object-cover" priority />
+        <Image src="https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=1600&q=80" alt="Notre Histoire" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 z-10 w-full px-6 pb-16 md:px-12 lg:px-20">
           <div className="max-w-xl">
@@ -65,7 +65,7 @@ export default function NotreHistoirePage() {
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-cream">
-                <Image src="https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Emmanuelle, fondatrice" fill className="object-cover" />
+                <Image src="https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=1600&q=80" alt="Emmanuelle, fondatrice" fill className="object-cover" />
               </div>
             </Reveal>
             <Reveal delay={150}>

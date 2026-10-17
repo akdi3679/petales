@@ -9,21 +9,21 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  "https://images.pexels.com/photos/56866/pexels-photo-56866.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/1099660/pexels-photo-1099660.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/1122531/pexels-photo-1122531.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1478146059778-26028b07395a?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=800&q=80",
 ];
 
 export default function OccasionsPage() {
   return (
     <main className="bg-ivory">
       <section className="relative h-dvh w-full overflow-hidden">
-        <Image src="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Occasions" fill className="object-cover" priority />
+        <Image src="https://images.unsplash.com/photo-1518895949257-95d8adfd52c7?auto=format&fit=crop&w=1600&q=80" alt="Occasions" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 z-10 w-full px-6 pb-16 md:px-12 lg:px-20">
           <div className="max-w-xl">
