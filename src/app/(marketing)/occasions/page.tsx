@@ -1,30 +1,29 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Reveal } from "@/components/ui/reveal";
 
 export const metadata: Metadata = {
   title: "Occasions & Cadeaux",
-  description: "Trouvez la crÃ©ation parfaite pour chaque moment : amour, anniversaire, naissance, remerciement, ou sur-mesure.",
+  description: "Trouvez la création parfaite pour chaque moment : amour, anniversaire, naissance, remerciement, ou sur-mesure.",
 };
 
 const galleryImages = [
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/1099660/pexels-photo-1099660.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/1122531/pexels-photo-1122531.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800",
 ];
 
 export default function OccasionsPage() {
   return (
     <main className="bg-ivory">
-      {/* Hero */}
       <section className="relative h-dvh w-full overflow-hidden">
-        <Image src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Occasions" fill className="object-cover" priority />
+        <Image src="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Occasions" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 z-10 w-full px-6 pb-16 md:px-12 lg:px-20">
           <div className="max-w-xl">
@@ -34,7 +33,7 @@ export default function OccasionsPage() {
                 <span className="script mt-2 block text-3xl text-rose sm:text-4xl">le geste parfait</span>
               </h1>
               <p className="mt-5 text-sm leading-7 text-ivory/90 sm:text-base drop-shadow-md max-w-md">
-                Fini le stress des cadeaux classiques. Offrez une Å“uvre d'art comestible qui ne fanera jamais.
+                Fini le stress des cadeaux classiques. Offrez une œuvre d'art comestible qui ne fanera jamais.
               </p>
               <div className="mt-8">
                 <Link href="#collections" className="group inline-flex flex-col items-start">
@@ -47,35 +46,27 @@ export default function OccasionsPage() {
         </div>
       </section>
 
-      {/* Inspiration & Custom Occasions Trigger */}
       <section className="py-24 px-6 bg-cream/20">
         <div className="mx-auto max-w-4xl text-center">
           <Reveal>
             <p className="eyebrow justify-center text-rose-deep">Inspiration</p>
-            <h2 className="display mt-4 text-3xl text-ink sm:text-4xl">
-              CÃ©lÃ©brez chaque instant
-            </h2>
+            <h2 className="display mt-4 text-3xl text-ink sm:text-4xl">Célébrez chaque instant</h2>
             <p className="mt-6 text-base leading-8 text-ink/70">
-              Que ce soit pour un <span className="font-semibold text-ink">anniversaire</span>, une <span className="font-semibold text-ink">dÃ©claration d'amour</span>, un <span className="font-semibold text-ink">remerciement</span>, une <span className="font-semibold text-ink">naissance</span> ou simplement pour dire <span className="font-semibold text-ink">"Je pense Ã  toi"</span>, nos crÃ©ations capturent l'essence de votre message.
+              Que ce soit pour un <span className="font-semibold text-ink">anniversaire</span>, une <span className="font-semibold text-ink">déclaration d'amour</span>, un <span className="font-semibold text-ink">remerciement</span>, une <span className="font-semibold text-ink">naissance</span> ou simplement pour dire <span className="font-semibold text-ink">"Je pense à toi"</span>, nos créations capturent l'essence de votre message.
             </p>
-            
-            {/* The Trigger Card for Unmentioned Occasions */}
             <div className="mt-10 p-8 bg-white rounded-2xl border border-line shadow-sm">
-              <p className="text-lg font-title text-ink mb-3">
-                Votre occasion est unique ?
-              </p>
+              <p className="text-lg font-title text-ink mb-3">Votre occasion est unique ?</p>
               <p className="text-sm leading-7 text-ink/70 mb-6 max-w-xl mx-auto">
-                DiplÃ´me, dÃ©part Ã  la retraite, nouvelle maison, ou un clin d'Å“il complice... Si vous ne trouvez pas exactement ce que vous cherchez, imaginez-le avec nous. Nous crÃ©ons des piÃ¨ces sur-mesure pour raconter votre histoire.
+                Diplôme, départ à la retraite, nouvelle maison, ou un clin d'œil complice... Si vous ne trouvez pas exactement ce que vous cherchez, imaginez-le avec nous. Nous créons des pièces sur-mesure pour raconter votre histoire.
               </p>
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-[#f5a1a1] hover:bg-[#e89595] rounded-full transition-colors shadow-md shadow-[#f5a1a1]/30">
-                Imaginer ma crÃ©ation sur-mesure
+                Imaginer ma création sur-mesure
               </Link>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Gallery */}
       <section id="collections" className="px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
@@ -91,14 +82,13 @@ export default function OccasionsPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 pb-43 px-6 text-center bg-cream/30">
+      <section className="py-24 px-6 text-center bg-cream/30">
         <Reveal>
           <p className="text-base leading-8 text-ink/70 max-w-xl mx-auto">
-            PrÃªt Ã  faire battre son cÅ“ur ? Parcourez notre boutique et trouvez la crÃ©ation qui dira exactement ce que vous ressentez.
+            Prêt à faire battre son cœur ? Parcourez notre boutique et trouvez la création qui dira exactement ce que vous ressentez.
           </p>
           <Link href="/boutique" className="group inline-flex flex-col items-center mt-8">
-            <span className="text-sm font-medium tracking-widest uppercase text-rose-deep">DÃ©couvrir la boutique</span>
+            <span className="text-sm font-medium tracking-widest uppercase text-rose-deep">Découvrir la boutique</span>
             <span className="mt-2 h-px w-full bg-rose-deep transition-all duration-500 group-hover:w-3/4" />
           </Link>
         </Reveal>
