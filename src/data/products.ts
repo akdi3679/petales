@@ -28,66 +28,66 @@ const base = [
   { 
     id: "1", slug: "baiser-de-pivoine", name: "Baiser de Pivoine", bestSeller: true, price: 85, 
     tags: ["amour", "pink", "roses", "bouquets"], 
-    image: "https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=800&q=80", 
-    shortDescription: "Pivoines sculptées aux teintes poudrées.", 
-    description: "Un bouquet romantique aux teintes douces, sculpté à la main pour capturer l'essence d'un amour éternel." 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
+    shortDescription: "Pivoines sculptÃƒÂ©es aux teintes poudrÃƒÂ©es.", 
+    description: "Un bouquet romantique aux teintes douces, sculptÃƒÂ© ÃƒÂ  la main pour capturer l'essence d'un amour ÃƒÂ©ternel." 
   },
   { 
     id: "2", slug: "douceur-daurore", name: "Douceur d'Aurore", bestSeller: true, price: 65, 
     tags: ["naissance", "white", "roses", "boxes"], 
-    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80", 
-    shortDescription: "Nuances pastel pour un nouveau départ.", 
-    description: "Des nuances pastel délicates pour célébrer une naissance ou un nouveau départ en douceur." 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
+    shortDescription: "Nuances pastel pour un nouveau dÃƒÂ©part.", 
+    description: "Des nuances pastel dÃƒÂ©licates pour cÃƒÂ©lÃƒÂ©brer une naissance ou un nouveau dÃƒÂ©part en douceur." 
   },
   { 
-    id: "3", slug: "eclat-de-rose", name: "Éclat de Rose", bestSeller: true, price: 120, 
+    id: "3", slug: "eclat-de-rose", name: "Ãƒâ€°clat de Rose", bestSeller: true, price: 120, 
     tags: ["amour", "red", "roses", "bouquets", "celebration"], 
-    image: "https://images.unsplash.com/photo-1518895949257-95d8adfd52c7?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1518895949257-95d8adfd52c7?auto=format&fit=crop&w=800&q=80", 
-    shortDescription: "L'intensité du rouge, sans compromis.", 
-    description: "L'intensité du rouge dans une composition audacieuse et passionnée." 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
+    shortDescription: "L'intensitÃƒÂ© du rouge, sans compromis.", 
+    description: "L'intensitÃƒÂ© du rouge dans une composition audacieuse et passionnÃƒÂ©e." 
   },
   { 
     id: "4", slug: "jardin-secret", name: "Jardin Secret", bestSeller: true, price: 95, 
     tags: ["remerciement", "pink", "chrysanthemums", "vases"], 
-    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80", 
-    shortDescription: "Un écrin de verdure pour dire merci.", 
-    description: "Un écrin de verdure et de fleurs délicates pour dire merci avec élégance." 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
+    shortDescription: "Un ÃƒÂ©crin de verdure pour dire merci.", 
+    description: "Un ÃƒÂ©crin de verdure et de fleurs dÃƒÂ©licates pour dire merci avec ÃƒÂ©lÃƒÂ©gance." 
   },
   { 
     id: "5", slug: "coffret-azur", name: "Coffret Azur", bestSeller: true, price: 150, 
     tags: ["celebration", "green", "sim_carnations", "gift_sets", "boxes"], 
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80", 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
     shortDescription: "Notre coffret signature.", 
-    description: "Notre coffret signature, parfait pour les cadeaux d'affaires ou les grandes célébrations." 
+    description: "Notre coffret signature, parfait pour les cadeaux d'affaires ou les grandes cÃƒÂ©lÃƒÂ©brations." 
   },
   { 
     id: "6", slug: "murmure-blanc", name: "Murmure Blanc", bestSeller: true, price: 75, 
     tags: ["sympathy", "white", "roses", "bags"], 
-    image: "https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=800&q=80", 
-    shortDescription: "La pureté du blanc, apaisante.", 
-    description: "La pureté du blanc dans une composition apaisante et pleine de douceur." 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
+    shortDescription: "La puretÃƒÂ© du blanc, apaisante.", 
+    description: "La puretÃƒÂ© du blanc dans une composition apaisante et pleine de douceur." 
   },
   { 
     id: "7", slug: "passion-rouge", name: "Passion Rouge", bestSeller: true, price: 110, 
     tags: ["amour", "red", "roses", "bouquets"], 
-    image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=800&q=80", 
-    shortDescription: "Une déclaration flamboyante.", 
-    description: "Une déclaration flamboyante pour les amours passionnées." 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
+    shortDescription: "Une dÃƒÂ©claration flamboyante.", 
+    description: "Une dÃƒÂ©claration flamboyante pour les amours passionnÃƒÂ©es." 
   },
   { 
-    id: "8", slug: "fraicheur-printaniere", name: "Fraîcheur Printanière", bestSeller: true, price: 80, 
+    id: "8", slug: "fraicheur-printaniere", name: "FraÃƒÂ®cheur PrintaniÃƒÂ¨re", bestSeller: true, price: 80, 
     tags: ["get_well", "pink", "chrysanthemums", "vases"], 
-    image: "https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=800&q=80", 
-    hoverImage: "https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=800&q=80", 
-    shortDescription: "Lumineuse, pour souhaiter un prompt rétablissement.", 
-    description: "Un bouquet lumineux pour souhaiter un prompt rétablissement ou célébrer le printemps." 
+    image: " param($match) Get-NextUnsplashUrl ", 
+    hoverImage: " param($match) Get-NextUnsplashUrl ", 
+    shortDescription: "Lumineuse, pour souhaiter un prompt rÃƒÂ©tablissement.", 
+    description: "Un bouquet lumineux pour souhaiter un prompt rÃƒÂ©tablissement ou cÃƒÂ©lÃƒÂ©brer le printemps." 
   },
 ];
 

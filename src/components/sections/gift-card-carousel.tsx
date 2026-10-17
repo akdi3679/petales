@@ -1,86 +1,170 @@
+"use client";
+
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { giftCards } from "@/data/gift-cards";
-import { products } from "@/data/products";
-import { Reveal } from "@/components/ui/reveal";
+
+// Uniquement les images Unsplash que tu as fournies
+const cards = [
+  {
+    id: 1,
+    title: "Cadeau tout prêt",
+    subtitle: "Offrez l'attention parfaite",
+    image: "https://images.unsplash.com/photo-1tjpDooYioU?auto=format&fit=crop&w=800&q=80",
+    link: "/boutique"
+  },
+  {
+    id: 2,
+    title: "Carte personnalisée",
+    subtitle: "Un message unique",
+    image: "https://images.unsplash.com/photo-xQLLJXHuItc?auto=format&fit=crop&w=800&q=80",
+    link: "/boutique"
+  },
+  {
+    id: 3,
+    title: "Coffret signature",
+    subtitle: "L'élégance absolue",
+    image: "https://images.unsplash.com/photo-FHwt-zKndpY?auto=format&fit=crop&w=800&q=80",
+    link: "/boutique"
+  },
+  {
+    id: 4,
+    title: "Bouquet éternel",
+    subtitle: "Ne fane jamais",
+    image: "https://images.unsplash.com/photo-fY1ECB1RCd0?auto=format&fit=crop&w=800&q=80",
+    link: "/boutique"
+  },
+  {
+    id: 5,
+    title: "Création artisanale",
+    subtitle: "Fait main avec amour",
+    image: "https://images.unsplash.com/photo-ElxBX6bsAgQ?auto=format&fit=crop&w=800&q=80",
+    link: "/boutique"
+  },
+];
 
 export function GiftCardCarousel() {
-  const scrollItems = [...giftCards, ...giftCards];
+  const trackRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number | null>(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const currentTranslate = useRef(0);
+  const prevTranslate = useRef(0);
+
+  // --- AUTO-SCROLL FLUIDE ---
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    let lastTime = performance.now();
+    
+    const animate = (time: number) => {
+      if (!isDragging.current) {
+        const deltaTime = time - lastTime;
+        const speed = 0.05; // Vitesse du défilement
+        currentTranslate.current -= speed * deltaTime;
+        
+        // Boucle infinie
+        const trackWidth = track.scrollWidth / 2;
+        if (trackWidth > 0 && Math.abs(currentTranslate.current) >= trackWidth) {
+          currentTranslate.current += trackWidth;
+        }
+        
+        track.style.transform = `translateX(${currentTranslate.current}px)`;
+      }
+      lastTime = time;
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+    return () => { 
+      if (animationRef.current) cancelAnimationFrame(animationRef.current); 
+    };
+  }, []);
+
+  // --- GESTION DU DRAG (SOURIS & TACTILE) ---
+  const handlePointerDown = (e: React.PointerEvent) => {
+    isDragging.current = true; // Met en pause l'auto-scroll
+    startX.current = e.clientX;
+    prevTranslate.current = currentTranslate.current;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDragging.current) return;
+    const diff = e.clientX - startX.current;
+    currentTranslate.current = prevTranslate.current + diff;
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translateX(${currentTranslate.current}px)`;
+    }
+  };
+
+  const handlePointerUp = () => {
+    isDragging.current = false; // Relance l'auto-scroll au relâchement
+  };
 
   return (
-    <section className="w-full bg-cream/30 py-20 overflow-hidden">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mb-12 text-center">
-        <Reveal>
-          {/* Removed 'eyebrow' class and styled manually to force rose-deep color */}
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rose-deep flex items-center justify-center gap-3">
-            <span className="w-8 h-px bg-rose-deep/60" />
-            Cadeau tout prêt
-            <span className="w-8 h-px bg-rose-deep/60" />
-          </p>
+    <section className="py-24 px-6 bg-cream/20">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center mb-12">
+          <p className="eyebrow justify-center text-rose-deep">Nos Créations</p>
           <h2 className="display mt-4 text-3xl text-ink sm:text-4xl">
-            Offrez l'attention parfaite
+            Cadeau tout prêt
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-ink/70">
-            Choisissez une carte pensée pour eux. Le produit et le message sont déjà prêts, 
-            vous n'avez plus qu'à valider.
+          <p className="mt-4 text-base text-ink/70">
+            Offrez l'attention parfaite
           </p>
-        </Reveal>
-      </div>
+        </div>
 
-      {/* Infinite Marquee Container */}
-      <div className="relative w-full">
-        {/* Fade masks on edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-cream/30 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-cream/30 to-transparent z-10 pointer-events-none" />
-
-        <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused] w-max px-6">
-          {scrollItems.map((card, index) => {
-            const product = products.find((p) => p.slug === card.productSlug);
-            if (!product) return null;
-
-            const commandUrl = `/commande?produit=${product.slug}&recipient=${encodeURIComponent(card.persona.replace("Pour ", ""))}&message=${encodeURIComponent(card.message)}`;
-
-            return (
-              <Link 
-                key={`${card.id}-${index}`} 
-                href={commandUrl}
-                className="group flex shrink-0 w-[320px] flex-col bg-white rounded-2xl border border-line shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-              >
-                {/* Image Part */}
-                <div className="relative h-48 w-full overflow-hidden">
+        {/* Conteneur extérieur : gère le drag et cache le débordement */}
+        <div 
+          className="overflow-hidden cursor-grab active:cursor-grabbing select-none"
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+        >
+          {/* Conteneur intérieur : celui qui se déplace */}
+          <div ref={trackRef} className="flex gap-6 w-max">
+            
+            {/* Cartes originales */}
+            {cards.map((card) => (
+              <Link key={card.id} href={card.link} className="group block w-72 flex-shrink-0">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-white border border-line shadow-sm hover:shadow-lg transition-shadow">
                   <Image 
-                    src={product.image} 
-                    alt={product.name} 
+                    src={card.image} 
+                    alt={card.title} 
                     fill 
-                    className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
                   />
-                  <div className={`absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider text-ink border ${card.accent}`}>
-                    {card.persona}
-                  </div>
-                </div>
-
-                {/* Content Part */}
-                <div className="flex flex-col flex-1 p-5">
-                  <h3 className="font-title text-lg text-ink leading-tight mb-3">
-                    {product.name}
-                  </h3>
-                  {/* Increased from text-xs to text-sm for better readability while scrolling */}
-                  <p className="text-sm text-ink/70 italic font-serif leading-relaxed line-clamp-3 mb-4 flex-1">
-                    "{card.message}"
-                  </p>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-line/50">
-                    <span className="text-base font-semibold text-rose-deep">
-                      {new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(card.priceCents / 100)}
-                    </span>
-                    <span className="text-sm font-medium text-ink/60 group-hover:text-rose-deep transition-colors flex items-center gap-1">
-                      Offrir <span aria-hidden="true">→</span>
-                    </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-title text-xl text-ivory mb-1">{card.title}</h3>
+                    <p className="text-sm text-ivory/80">{card.subtitle}</p>
                   </div>
                 </div>
               </Link>
-            );
-          })}
+            ))}
+
+            {/* Cartes dupliquées pour l'effet de défilement infini */}
+            {cards.map((card) => (
+              <Link key={`dup-${card.id}`} href={card.link} className="group block w-72 flex-shrink-0">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-white border border-line shadow-sm hover:shadow-lg transition-shadow">
+                  <Image 
+                    src={card.image} 
+                    alt={card.title} 
+                    fill 
+                    className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="font-title text-xl text-ivory mb-1">{card.title}</h3>
+                    <p className="text-sm text-ivory/80">{card.subtitle}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+
+          </div>
         </div>
       </div>
     </section>
