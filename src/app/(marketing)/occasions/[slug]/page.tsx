@@ -24,7 +24,8 @@ export default async function OccasionPage({ params }: { params: Promise<{ slug:
   const occasion = occasions.find((o) => o.slug === slug);
   if (!occasion) notFound();
 
-  const list = products.filter((p) => p.tags.occasions.includes(slug));
+  // Safely check if tags is an array and includes the slug
+  const list = products.filter((p) => Array.isArray(p.tags) && p.tags.includes(slug));
 
   return (
     <>
@@ -37,7 +38,7 @@ export default async function OccasionPage({ params }: { params: Promise<{ slug:
         <Link href="/occasions" className="btn btn-outline">Toutes les occasions</Link>
       </PageHero>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 pb-32 md:pb-24">
         {list.length === 0 ? (
           <p className="text-sm text-ink/60">
             Aucune création pour le moment — écrivez-nous pour du sur-mesure.
