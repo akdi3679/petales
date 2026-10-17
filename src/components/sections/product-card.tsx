@@ -20,7 +20,7 @@ export function ProductCard({ product }: { product: Product }) {
             sizes="(max-width: 768px) 100vw, 33vw"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
-        </</div>
+        </div>
         
         <div className="p-4">
           <h3 className="font-title text-lg text-ink group-hover:text-rose-deep transition-colors line-clamp-1">
