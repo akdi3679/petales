@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Reveal } from "@/components/ui/reveal";
@@ -7,14 +7,14 @@ import { products } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Notre Histoire",
-  description: "De la première rose en guimauve à l'atelier azuréen : découvrez le savoir-faire et l'univers de la Maison de Pétales.",
+  description: "De la premiÃ¨re rose en guimauve Ã  l'atelier azurÃ©en : dÃ©couvrez le savoir-faire et l'univers de la Maison de PÃ©tales.",
 };
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1518895949257-95d8adfd52c7?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80",
+  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600",
 ];
 
 const favoriteProducts = products.slice(0, 3);
@@ -24,7 +24,7 @@ export default function NotreHistoirePage() {
     <main className="bg-ivory pb-32 md:pb-24">
       {/* 1. HERO */}
       <section className="relative h-dvh w-full overflow-hidden">
-        <Image src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=1600&q=80" alt="Notre Histoire" fill className="object-cover" priority />
+        <Image src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Notre Histoire" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 z-10 w-full px-6 pb-16 md:px-12 lg:px-20">
           <div className="max-w-xl">
@@ -34,11 +34,11 @@ export default function NotreHistoirePage() {
                 <span className="script mt-2 block text-3xl text-rose sm:text-4xl">passion & savoir-faire</span>
               </h1>
               <p className="mt-5 text-sm leading-7 text-ivory/90 sm:text-base drop-shadow-md max-w-md">
-                Tout a commencé par une obsession : capturer la beauté éphémère d'une fleur et la rendre éternelle.
+                Tout a commencÃ© par une obsession : capturer la beautÃ© Ã©phÃ©mÃ¨re d'une fleur et la rendre Ã©ternelle.
               </p>
               <div className="mt-8">
                 <Link href="#philosophie" className="group inline-flex flex-col items-start">
-                  <span className="text-sm font-medium tracking-widest uppercase text-ivory drop-shadow-md">Découvrir notre univers</span>
+                  <span className="text-sm font-medium tracking-widest uppercase text-ivory drop-shadow-md">DÃ©couvrir notre univers</span>
                   <span className="mt-2 h-px w-full bg-ivory transition-all duration-500 group-hover:w-3/4 group-hover:bg-rose" />
                 </Link>
               </div>
@@ -53,12 +53,12 @@ export default function NotreHistoirePage() {
           <Reveal>
             <p className="eyebrow justify-center text-rose-deep">Notre Philosophie</p>
             <h2 className="display mt-4 text-3xl text-ink sm:text-4xl">
-              Suspendre le temps, sublimer l'émotion
+              Suspendre le temps, sublimer l'Ã©motion
             </h2>
             <p className="mt-6 text-base leading-8 text-ink/70">
               Pourquoi offrir une fleur qui dure ? Parce que l'acte d'offrir est, au fond, une tentative de figer l'instant. 
-              Nous croyons que les émotions les plus fortes méritent un écrin qui ne s'efface pas. 
-              À la croisée de l'art floral et de la pâtisserie d'exception, nous façonnons des souvenirs tangibles, conçus pour être contemplés, conservés et partagés.
+              Nous croyons que les Ã©motions les plus fortes mÃ©ritent un Ã©crin qui ne s'efface pas. 
+              Ã€ la croisÃ©e de l'art floral et de la pÃ¢tisserie d'exception, nous faÃ§onnons des souvenirs tangibles, conÃ§us pour Ãªtre contemplÃ©s, conservÃ©s et partagÃ©s.
             </p>
           </Reveal>
         </div>
@@ -71,7 +71,7 @@ export default function NotreHistoirePage() {
             <Reveal>
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-cream">
                 <Image 
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80" 
+                  src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1600" 
                   alt="Emmanuelle, fondatrice" 
                   fill 
                   className="object-cover"
@@ -85,10 +85,10 @@ export default function NotreHistoirePage() {
               </h2>
               <div className="mt-6 space-y-4 text-base leading-8 text-ink/70">
                 <p>
-                  Tout a commencé dans une petite cuisine ensoleillée de Nice. Fascinée par la botanique et la pâtisserie, Emmanuelle cherchait à offrir un bouquet à sa mère qui ne fanerait jamais.
+                  Tout a commencÃ© dans une petite cuisine ensoleillÃ©e de Nice. FascinÃ©e par la botanique et la pÃ¢tisserie, Emmanuelle cherchait Ã  offrir un bouquet Ã  sa mÃ¨re qui ne fanerait jamais.
                 </p>
                 <p>
-                  Après des mois d'expérimentation, elle a mis au point une recette unique de guimauve végétale à base d'agar-agar, capable de reproduire la délicatesse d'un véritable pétale.
+                  AprÃ¨s des mois d'expÃ©rimentation, elle a mis au point une recette unique de guimauve vÃ©gÃ©tale Ã  base d'agar-agar, capable de reproduire la dÃ©licatesse d'un vÃ©ritable pÃ©tale.
                 </p>
               </div>
               <Link href="/contact" className="group inline-flex flex-col items-start mt-8">
@@ -106,12 +106,12 @@ export default function NotreHistoirePage() {
           <Reveal>
             <p className="eyebrow justify-center text-rose-deep">Notre Boutique</p>
             <h2 className="display mt-4 text-3xl text-ink sm:text-4xl">
-              Un écrin de douceur sur la Côte d'Azur
+              Un Ã©crin de douceur sur la CÃ´te d'Azur
             </h2>
             <p className="mt-6 text-base leading-8 text-ink/70">
-              Créée en 2021, notre boutique est le fruit d'une rencontre entre la passion de la botanique et l'art de la pâtisserie. 
-              Située au cœur de Nice, elle est bien plus qu'un lieu de vente : c'est un espace sensoriel où les parfums subtils de vanille et de rose se mêlent à la lumière du sud. 
-              Chaque visite est une invitation à ralentir, à observer les détails de nos créations, et à repartir avec un morceau d'éternité.
+              CrÃ©Ã©e en 2021, notre boutique est le fruit d'une rencontre entre la passion de la botanique et l'art de la pÃ¢tisserie. 
+              SituÃ©e au cÅ“ur de Nice, elle est bien plus qu'un lieu de vente : c'est un espace sensoriel oÃ¹ les parfums subtils de vanille et de rose se mÃªlent Ã  la lumiÃ¨re du sud. 
+              Chaque visite est une invitation Ã  ralentir, Ã  observer les dÃ©tails de nos crÃ©ations, et Ã  repartir avec un morceau d'Ã©ternitÃ©.
             </p>
             <Link href="/contact" className="group inline-flex flex-col items-center mt-8">
               <span className="text-sm font-medium tracking-widest uppercase text-ink">Nous rendre visite</span>
@@ -127,7 +127,7 @@ export default function NotreHistoirePage() {
           <Reveal>
             <p className="eyebrow justify-center text-ink/70">Notre Savoir-Faire</p>
             <h2 className="display mt-4 text-3xl sm:text-4xl text-ink">
-              L'excellence dans chaque détail
+              L'excellence dans chaque dÃ©tail
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-10 sm:grid-cols-3">
@@ -139,9 +139,9 @@ export default function NotreHistoirePage() {
                     <path d="M12 12c2-2 4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="font-title text-xl mb-2 text-ink">100% Végétal</h3>
+                <h3 className="font-title text-xl mb-2 text-ink">100% VÃ©gÃ©tal</h3>
                 <p className="text-sm leading-7 text-ink/70">
-                  Nous avons banni la gélatine animale. Nos créations sont façonnées à base d'agar-agar et de colorants naturels, pour une gourmandise responsable.
+                  Nous avons banni la gÃ©latine animale. Nos crÃ©ations sont faÃ§onnÃ©es Ã  base d'agar-agar et de colorants naturels, pour une gourmandise responsable.
                 </p>
               </div>
             </Reveal>
@@ -157,7 +157,7 @@ export default function NotreHistoirePage() {
                 </div>
                 <h3 className="font-title text-xl mb-2 text-ink">Fait Main</h3>
                 <p className="text-sm leading-7 text-ink/70">
-                  Aucun moule industriel. Chaque pétale est étiré, texturisé et assemblé à la main par nos artisanes dans notre atelier.
+                  Aucun moule industriel. Chaque pÃ©tale est Ã©tirÃ©, texturisÃ© et assemblÃ© Ã  la main par nos artisanes dans notre atelier.
                 </p>
               </div>
             </Reveal>
@@ -170,9 +170,9 @@ export default function NotreHistoirePage() {
                     <line x1="12" y1="22.08" x2="12" y2="12" />
                   </svg>
                 </div>
-                <h3 className="font-title text-xl mb-2 text-ink">Écrin Protecteur</h3>
+                <h3 className="font-title text-xl mb-2 text-ink">Ã‰crin Protecteur</h3>
                 <p className="text-sm leading-7 text-ink/70">
-                  Chaque création est livrée dans un packaging anti-choc élégant, garantissant qu'elle arrive en parfait état.
+                  Chaque crÃ©ation est livrÃ©e dans un packaging anti-choc Ã©lÃ©gant, garantissant qu'elle arrive en parfait Ã©tat.
                 </p>
               </div>
             </Reveal>
@@ -186,13 +186,13 @@ export default function NotreHistoirePage() {
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
               <div>
-                <p className="eyebrow text-rose-deep">Nos Coups de Cœur</p>
+                <p className="eyebrow text-rose-deep">Nos Coups de CÅ“ur</p>
                 <h2 className="display mt-4 text-3xl text-ink sm:text-4xl">
-                  Les préférés de l'atelier
+                  Les prÃ©fÃ©rÃ©s de l'atelier
                 </h2>
               </div>
               <Link href="/boutique" className="text-sm font-medium text-ink hover:text-rose-deep transition-colors underline underline-offset-4">
-                Voir toute la collection →
+                Voir toute la collection â†’
               </Link>
             </div>
           </Reveal>
@@ -232,10 +232,10 @@ export default function NotreHistoirePage() {
       <section className="py-24 px-6 text-center bg-cream/30">
         <Reveal>
           <h2 className="display text-3xl text-ink sm:text-4xl mb-6">
-            Prêt à offrir l'éternité ?
+            PrÃªt Ã  offrir l'Ã©ternitÃ© ?
           </h2>
           <p className="text-base leading-8 text-ink/70 max-w-xl mx-auto mb-10">
-            Parcourez notre collection et trouvez la création qui racontera votre histoire, sans jamais faner.
+            Parcourez notre collection et trouvez la crÃ©ation qui racontera votre histoire, sans jamais faner.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
