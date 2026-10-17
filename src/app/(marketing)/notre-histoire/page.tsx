@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/56866/pexels-photo-56866.jpeg?auto=compress&cs=tinysrgb&w=800",
   "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=800",
 ];
 
 const favoriteProducts = products.slice(0, 3);
@@ -23,7 +23,7 @@ export default function NotreHistoirePage() {
   return (
     <main className="bg-ivory pb-32 md:pb-24">
       <section className="relative h-dvh w-full overflow-hidden">
-        <Image src="https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Notre Histoire" fill className="object-cover" priority />
+        <Image src="https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Notre Histoire" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 z-10 w-full px-6 pb-16 md:px-12 lg:px-20">
           <div className="max-w-xl">
@@ -65,7 +65,7 @@ export default function NotreHistoirePage() {
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-cream">
-                <Image src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Emmanuelle, fondatrice" fill className="object-cover" />
+                <Image src="https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Emmanuelle, fondatrice" fill className="object-cover" />
               </div>
             </Reveal>
             <Reveal delay={150}>

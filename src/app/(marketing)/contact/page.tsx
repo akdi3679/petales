@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <main className="bg-ivory pb-32 md:pb-24">
       <section className="relative h-[50vh] w-full overflow-hidden">
-        <img src="https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Atelier" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="https://images.pexels.com/photos/1099660/pexels-photo-1099660.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Atelier" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <h1 className="display text-4xl text-ivory sm:text-5xl md:text-6xl drop-shadow-lg">Contactez-nous</h1>

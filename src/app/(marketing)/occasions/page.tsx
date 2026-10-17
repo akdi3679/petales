@@ -9,14 +9,14 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/56866/pexels-photo-56866.jpeg?auto=compress&cs=tinysrgb&w=800",
   "https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800",
   "https://images.pexels.com/photos/1099660/pexels-photo-1099660.jpeg?auto=compress&cs=tinysrgb&w=800",
   "https://images.pexels.com/photos/1122531/pexels-photo-1122531.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800",
+  "https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&w=800",
 ];
 
 export default function OccasionsPage() {

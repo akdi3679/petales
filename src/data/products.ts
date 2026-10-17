@@ -28,8 +28,8 @@ const base = [
   { 
     id: "1", slug: "baiser-de-pivoine", name: "Baiser de Pivoine", bestSeller: true, price: 85, 
     tags: ["amour", "pink", "roses", "bouquets"], 
-    image: "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800", 
-    hoverImage: "https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    image: "https://images.pexels.com/photos/56866/pexels-photo-56866.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/56866/pexels-photo-56866.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Pivoines sculptées aux teintes poudrées.", 
     description: "Un bouquet romantique aux teintes douces, sculpté à la main pour capturer l'essence d'un amour éternel." 
   },
@@ -52,24 +52,24 @@ const base = [
   { 
     id: "4", slug: "jardin-secret", name: "Jardin Secret", bestSeller: true, price: 95, 
     tags: ["remerciement", "pink", "chrysanthemums", "vases"], 
-    image: "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=800", 
-    hoverImage: "https://images.pexels.com/photos/1093950/pexels-photo-1093950.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    image: "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Un écrin de verdure pour dire merci.", 
     description: "Un écrin de verdure et de fleurs délicates pour dire merci avec élégance." 
   },
   { 
     id: "5", slug: "coffret-azur", name: "Coffret Azur", bestSeller: true, price: 150, 
     tags: ["celebration", "green", "sim_carnations", "gift_sets", "boxes"], 
-    image: "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=800", 
-    hoverImage: "https://images.pexels.com/photos/3512718/pexels-photo-3512718.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    image: "https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/185893/pexels-photo-185893.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Notre coffret signature.", 
     description: "Notre coffret signature, parfait pour les cadeaux d'affaires ou les grandes célébrations." 
   },
   { 
     id: "6", slug: "murmure-blanc", name: "Murmure Blanc", bestSeller: true, price: 75, 
     tags: ["sympathy", "white", "roses", "bags"], 
-    image: "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=800", 
-    hoverImage: "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    image: "https://images.pexels.com/photos/1099660/pexels-photo-1099660.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/1099660/pexels-photo-1099660.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "La pureté du blanc, apaisante.", 
     description: "La pureté du blanc dans une composition apaisante et pleine de douceur." 
   },
@@ -84,8 +84,8 @@ const base = [
   { 
     id: "8", slug: "fraicheur-printaniere", name: "Fraîcheur Printanière", bestSeller: true, price: 80, 
     tags: ["get_well", "pink", "chrysanthemums", "vases"], 
-    image: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800", 
-    hoverImage: "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    image: "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800", 
+    hoverImage: "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800", 
     shortDescription: "Lumineuse, pour souhaiter un prompt rétablissement.", 
     description: "Un bouquet lumineux pour souhaiter un prompt rétablissement ou célébrer le printemps." 
   },
