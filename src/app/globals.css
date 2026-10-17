@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Parisienne&display=swap');
+
 @import "tailwindcss";
 
 @theme {
-  --font-title: var(--font-serif), Georgia, "Times New Roman", serif;
-  --font-hand: var(--font-script), "Segoe Script", cursive;
-  --font-body: var(--font-sans), "Segoe UI", system-ui, sans-serif;
+  --font-title: 'Cormorant Garamond', Georgia, serif, Georgia, "Times New Roman", serif;
+  --font-hand: 'Parisienne', cursive, "Segoe Script", cursive;
+  --font-body: system-ui, -apple-system, sans-serif, "Segoe UI", system-ui, sans-serif;
 
   --color-ivory: #ffffff;
   --color-cream: #fbfaf9;

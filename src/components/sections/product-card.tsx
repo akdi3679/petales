@@ -1,47 +1,51 @@
-import Link from "next/link";
-import type { Product } from "@/data/products";
-import { formatPrice } from "@/lib/format";
-import { FloralArt } from "@/components/illustrations/floral";
+"use client";
 
-export function ProductCard({ product }: { product: Product }) {`n  const { addItem } = useCart();
-  const signature = product.variants.find((v) => v.badge) ?? product.variants[1] ?? product.variants[0];
+import Link from "next/link";
+import Image from "next/image";
+import { useCart } from "@/hooks/use-cart";
+import type { Product } from "@/data/products";
+
+export function ProductCard({ product }: { product: Product }) {
+  const { addItem } = useCart();
 
   return (
-    <article className="card-luxe group h-full overflow-hidden">
-      <Link href={`/boutique/${product.slug}`} className="flex h-full flex-col p-4">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.2rem]">
-          <div className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${product.visuals.main} transition-all duration-500 group-hover:scale-105 group-hover:opacity-0`}>
-            <FloralArt kind="bouquet" className="h-3/4 w-3/4 text-rose-deep/70" />
-          </div>
-          <div className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${product.visuals.hover} opacity-0 scale-105 transition-all duration-500 group-hover:scale-100 group-hover:opacity-100`}>
-            <FloralArt kind="closeup" className="h-3/4 w-3/4 text-rose-deep/80" />
-          </div>
-
-          {!product.available && (
-            <span className="absolute left-3 top-3 rounded-full bg-ink/80 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-ivory">
-              Indisponible
-            </span>
-          )}
-          {product.available && product.bestSeller && (
-            <span className="absolute left-3 top-3 rounded-full border border-gold/40 bg-ivory/85 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-gold-ink backdrop-blur">
-              Best-seller
-            </span>
-          )}
-
-          <span className="btn absolute bottom-3 right-3 translate-y-2 rounded-full bg-rose-deep px-4 py-2 text-xs font-medium text-ivory opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-            Commander →
-          </span>
-        </div>
-
-        <div className="flex flex-1 flex-col px-2 pb-2 pt-5">
-          <h3 className="font-title text-xl text-ink">{product.name}</h3>
-          <p className="mt-2 line-clamp-2 text-sm leading-6 text-ink/65">{product.shortDescription}</p>
-          <div className="mt-4 flex flex-1 items-end justify-between border-t border-line pt-4">
-            <span className="text-xs text-ink/55">{signature.name}</span>
-            <span className="text-sm font-semibold text-rose-deep">{formatPrice(signature.priceCents)}</span>
-          </div>
+    <article className="group relative h-full overflow-hidden rounded-2xl bg-white border border-line transition-all hover:shadow-lg">
+      <Link href={`/boutique/${product.slug}`} className="block h-full">
+        <div className="relative aspect-[4/5] overflow-hidden bg-cream rounded-t-2xl">
+          <Image 
+            src={product.image} 
+            alt={product.name} 
+            fill 
+            className="object-cover transition-transform duration-700 group-hover:scale-105" 
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
+        </</div>
+        
+        <div className="p-4">
+          <h3 className="font-title text-lg text-ink group-hover:text-rose-deep transition-colors line-clamp-1">
+            {product.name}
+          </h3>
+          <p className="mt-1 text-sm font-medium text-rose-deep">
+            {product.price} 
+          </p>
         </div>
       </Link>
+
+      {/* Floating Add to Cart Button */}
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          addItem(product.id);
+        }}
+        className="absolute bottom-4 right-4 bg-[#f5a1a1] text-white p-3 rounded-full shadow-lg hover:bg-[#e89595] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 z-10"
+        aria-label="Ajouter au panier"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
     </article>
   );
 }

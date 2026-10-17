@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {`n  output: "export",`n  trailingSlash: true,
+const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

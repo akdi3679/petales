@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Parisienne, Inter } from "next/font/google";
+
 import "./globals.css";
 import { Header } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${parisienne.variable} ${inter.variable}`}>
+    <html lang="fr" className={``}>
       <head>
         <noscript>
           <style>{`.reveal { opacity: 1 !important; transform: none !important; filter: none !important; }`}</style>
