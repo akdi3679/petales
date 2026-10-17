@@ -13,7 +13,7 @@ export const occasions: Occasion[] = [
     slug: "anniversaire",
     name: "Anniversaire",
     description: "Une attention douce pour célébrer une année de plus.",
-    image: u("photo-1518895949257-95d8adfd52c7"),
+    image: u("photo-1712135596996-3dda241aa9bc"),
   },
   {
     slug: "mariage",
@@ -46,3 +46,5 @@ export const occasions: Occasion[] = [
     image: u("photo-1526047932273-341f2a7631f9"),
   },
 ];
+
+  
