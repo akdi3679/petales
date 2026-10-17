@@ -1,0 +1,16 @@
+{
+  "name": "Maison de Pétales",
+  "short_name": "Maison de Pétales",
+  "description": "Fleurs en guimauve artisanales sur la Côte d'Azur.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f5a1a1",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
